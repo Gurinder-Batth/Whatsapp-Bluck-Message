@@ -1,0 +1,25 @@
+{
+	"manifest_version" : 2,
+	"name" : "Whatsapp Message Sender Chrome Extension",
+	"version" : "0.001",
+	"content_scripts" : [
+		{
+			"matches" : [
+				"<all_urls>"
+                 ],
+                "js" : ["content.js"],
+                "css":["fix.css"]
+
+        }
+    ],
+    "background" : {
+                  "scripts" : ["background.js"]
+    },
+    "browser_action" : {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"     
+    },
+    "permissions": [
+        "storage"
+    ]
+}
